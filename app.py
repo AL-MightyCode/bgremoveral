@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, send_file
 from rembg import remove
 from PIL import Image
 import io
+import os  # Ensure you import os to access environment variables
 from flask_cors import CORS
 
 app = Flask(__name__)
@@ -27,4 +28,5 @@ def home():
     return render_template("index.html")
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    # Modify this line to use the dynamic port
+    app.run(debug=True, host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
