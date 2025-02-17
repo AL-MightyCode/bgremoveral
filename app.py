@@ -35,7 +35,7 @@ def home():
 
 if __name__ == "__main__":
     # Explicitly get port from environment
-    port = int(os.environ.get("PORT", 5000))
+    port = int(os.environ.get("PORT",10000))
     
     # Print port for debugging
     print(f"Starting server on port {port}", file=sys.stderr)
