@@ -3,5 +3,5 @@ services:
     name: bgremoveral
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn --bind 0.0.0.0:8000 app:app"
+    startCommand: "gunicorn --bind 0.0.0.0:10000 app:app"
     port: 10000
